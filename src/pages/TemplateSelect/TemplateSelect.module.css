@@ -1,0 +1,29 @@
+.templatesPage {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.templateBtn {
+	width: 150px;
+	margin-bottom: 12px;
+}
+
+.active {
+	border: 2px solid #007bff;
+}
+
+.menuEditorBtn {
+	width: 150px;
+	padding: 10px 0;
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+	background-color: #007bff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+}

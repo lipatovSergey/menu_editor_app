@@ -23,6 +23,8 @@ import { DragOverlayItem } from "../DragOverlayItem/DragOverlayItem";
 import { useMenuTemplate } from "../../context/MenuTemplateContext/MenuTemplateContext";
 import { useSectionsContext } from "../../context/SectionsContext/SectionsContext";
 import { useDishesContext } from "../../context/DishesContext/DishesContext";
+import { Link } from "react-router-dom";
+import styles from "./MenuEditor.module.css";
 
 export default function MenuEditor() {
 	const { dishes, setDishes } = useDishesContext();
@@ -100,12 +102,17 @@ export default function MenuEditor() {
 	console.log(activeItem);
 
 	return (
-		<DndContext
-			sensors={sensors}
-			onDragStart={handleDragStart}
-			onDragEnd={handleDragEnd}
-		>
-			<div className={template.menu}>
+		<div className={`${styles.editor} ${template.menu}`}>
+			<div className={styles.editorHeader}>
+				<Link className={styles.backBtn} to={"/templates"}>
+					Back to template selection
+				</Link>
+			</div>
+			<DndContext
+				sensors={sensors}
+				onDragStart={handleDragStart}
+				onDragEnd={handleDragEnd}
+			>
 				<SortableContext
 					items={sections.map(s => s.id)}
 					strategy={horizontalListSortingStrategy}
@@ -119,27 +126,28 @@ export default function MenuEditor() {
 				>
 					<DishesList />
 				</SortableContext>
-			</div>
 
-			{/* Добавляем DragOverlay */}
-			<DragOverlay style={{ zIndex: 1000 }}>
-				{activeItem && (
-					<DragOverlayItem id={activeItem.id}>
-						{activeItem.type === "dish" ? (
-							dishes.find(d => d.id === activeItem.id) ? (
-								<DishCard
-									dish={dishes.find(d => d.id === activeItem.id)!}
+				{/* Добавляем DragOverlay */}
+				<DragOverlay style={{ zIndex: 1000 }}>
+					{activeItem && (
+						<DragOverlayItem id={activeItem.id}>
+							{activeItem.type === "dish" ? (
+								dishes.find(d => d.id === activeItem.id) ? (
+									<DishCard
+										dish={dishes.find(d => d.id === activeItem.id)!}
+										isSorting={false}
+									/>
+								) : null
+							) : sections.find(s => s.id === activeItem.id) ? (
+								<MenuSectionItem
+									section={sections.find(s => s.id === activeItem.id)!}
 									isSorting={false}
 								/>
-							) : null
-						) : sections.find(s => s.id === activeItem.id) ? (
-							<MenuSectionItem
-								section={sections.find(s => s.id === activeItem.id)!}
-							/>
-						) : null}
-					</DragOverlayItem>
-				)}
-			</DragOverlay>
-		</DndContext>
+							) : null}
+						</DragOverlayItem>
+					)}
+				</DragOverlay>
+			</DndContext>
+		</div>
 	);
 }

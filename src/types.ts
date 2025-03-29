@@ -11,3 +11,5 @@ export interface MenuSection {
 }
 
 export type CssModule = { [key: string]: string };
+
+export type TemplateName = "dark" | "classic" | "blue" | "orange" | "green";

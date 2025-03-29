@@ -12,7 +12,7 @@ export default function MenuSections() {
 	const isSorting = activeSorting === "sections";
 
 	return (
-		<nav className={`${styles.menuSectionsNav}, ${template.navigation}`}>
+		<nav className={`${styles.menuSectionsNav} ${template.navigation}`}>
 			<button onClick={addSection}>Add</button>
 			<SortButton listToSort={"sections"} active={isSorting} />
 			<div className={styles.menuSectionsList}>

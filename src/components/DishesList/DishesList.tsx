@@ -16,7 +16,7 @@ export default function DishesList() {
 	console.log(activeSorting);
 
 	return (
-		<div className={template.menu}>
+		<div className={`${template.menu} ${styles.wrapper}`}>
 			<button onClick={addDish}>Add</button>
 			<SortButton listToSort={"dishes"} active={isSorting} />
 			<div className={styles.wrapper}>

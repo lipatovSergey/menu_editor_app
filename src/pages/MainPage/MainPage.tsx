@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import styles from "./MainPage.module.css";
 
 export default function MainPage() {
 	return (
-		<div>
-			<Link to={"/templates"}>Create New Menu</Link>
-			<button>My Menues</button>
+		<div className={styles.mainPage}>
+			<Link className={styles.createMenuBtn} to={"/templates"}>
+				Create New Menu
+			</Link>
 		</div>
 	);
 }
