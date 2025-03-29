@@ -1,0 +1,7 @@
+.menuSectionsList {
+	display: flex;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: 28px 0;
+	gap: 12px;
+}

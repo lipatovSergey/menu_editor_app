@@ -1,0 +1,326 @@
+{
+  "sections": [
+    {
+      "id": "11",
+      "name": "Main Dishes"
+    },
+    {
+      "id": "22",
+      "name": "Desserts"
+    },
+    {
+      "id": "33",
+      "name": "Second Dishes"
+    },
+    {
+      "id": "44",
+      "name": "Alcohol"
+    },
+    {
+      "id": "55",
+      "name": "Soups"
+    }
+  ],
+  "dishes": [
+    {
+      "id": "1",
+      "sectionId": "11",
+      "name": "Pastadsfsd",
+      "description": "With tomato sauce"
+    },
+    {
+      "id": "2",
+      "sectionId": "11",
+      "name": "Pizza",
+      "description": "Pepperoni with cheese"
+    },
+    {
+      "id": "3",
+      "sectionId": "11",
+      "name": "Burger",
+      "description": "Beef burger with lettuce"
+    },
+    {
+      "id": "4",
+      "sectionId": "11",
+      "name": "Steak",
+      "description": "Grilled ribeye steak"
+    },
+    {
+      "id": "5",
+      "sectionId": "11",
+      "name": "Sushi",
+      "description": "Assorted sushi rolls"
+    },
+    {
+      "id": "6",
+      "sectionId": "11",
+      "name": "Tacos",
+      "description": "Spicy chicken tacos"
+    },
+    {
+      "id": "7",
+      "sectionId": "11",
+      "name": "Risottodsa",
+      "description": "Creamy mushroom risotto"
+    },
+    {
+      "id": "8",
+      "sectionId": "11",
+      "name": "Lasagna",
+      "description": "Layered pasta with cheese"
+    },
+    {
+      "id": "9",
+      "sectionId": "11",
+      "name": "Curry",
+      "description": "Chicken curry with rice"
+    },
+    {
+      "id": "10",
+      "sectionId": "11",
+      "name": "Fried Rice",
+      "description": "Vegetable fried rice"
+    },
+    {
+      "id": "11",
+      "sectionId": "22",
+      "name": "Ice Cream",
+      "description": "Vanilla ice cream"
+    },
+    {
+      "id": "12",
+      "sectionId": "22",
+      "name": "Cheesecake",
+      "description": "New York cheesecake"
+    },
+    {
+      "id": "13",
+      "sectionId": "22",
+      "name": "Chocolate Cake",
+      "description": "Rich chocolate cake"
+    },
+    {
+      "id": "14",
+      "sectionId": "22",
+      "name": "Tiramisu",
+      "description": "Classic Italian tiramisu"
+    },
+    {
+      "id": "15",
+      "sectionId": "22",
+      "name": "Panna Cotta",
+      "description": "Creamy panna cotta"
+    },
+    {
+      "id": "16",
+      "sectionId": "22",
+      "name": "Apple Pie",
+      "description": "Homemade apple pie"
+    },
+    {
+      "id": "17",
+      "sectionId": "22",
+      "name": "Brownie",
+      "description": "Chocolate fudge brownie"
+    },
+    {
+      "id": "18",
+      "sectionId": "22",
+      "name": "Macarons",
+      "description": "Assorted French macarons"
+    },
+    {
+      "id": "19",
+      "sectionId": "22",
+      "name": "Cupcake",
+      "description": "Vanilla cupcake with frosting"
+    },
+    {
+      "id": "20",
+      "sectionId": "22",
+      "name": "Pudding",
+      "description": "Caramel pudding"
+    },
+    {
+      "id": "21",
+      "sectionId": "33",
+      "name": "Mashed Potatoes",
+      "description": "Creamy mashed potatoes"
+    },
+    {
+      "id": "22",
+      "sectionId": "33",
+      "name": "Grilled Vegetables",
+      "description": "Seasonal grilled veggies"
+    },
+    {
+      "id": "23",
+      "sectionId": "33",
+      "name": "Rice Pilaf",
+      "description": "Fragrant rice pilaf"
+    },
+    {
+      "id": "24",
+      "sectionId": "33",
+      "name": "Quinoa Salad",
+      "description": "Healthy quinoa salad"
+    },
+    {
+      "id": "25",
+      "sectionId": "33",
+      "name": "Garlic Bread",
+      "description": "Toasted garlic bread"
+    },
+    {
+      "id": "26",
+      "sectionId": "33",
+      "name": "Coleslaw",
+      "description": "Classic coleslaw"
+    },
+    {
+      "id": "27",
+      "sectionId": "33",
+      "name": "Baked Beans",
+      "description": "Sweet baked beans"
+    },
+    {
+      "id": "28",
+      "sectionId": "33",
+      "name": "Caesar Salad",
+      "description": "Chicken Caesar salad"
+    },
+    {
+      "id": "29",
+      "sectionId": "33",
+      "name": "French Fries",
+      "description": "Crispy french fries"
+    },
+    {
+      "id": "30",
+      "sectionId": "33",
+      "name": "Onion Rings",
+      "description": "Golden onion rings"
+    },
+    {
+      "id": "31",
+      "sectionId": "44",
+      "name": "Mojito",
+      "description": "Classic mint mojito"
+    },
+    {
+      "id": "32",
+      "sectionId": "44",
+      "name": "Margarita",
+      "description": "Tequila margarita"
+    },
+    {
+      "id": "33",
+      "sectionId": "44",
+      "name": "Martini",
+      "description": "Chilled martini"
+    },
+    {
+      "id": "34",
+      "sectionId": "44",
+      "name": "Old Fashioned",
+      "description": "Whiskey old fashioned"
+    },
+    {
+      "id": "35",
+      "sectionId": "44",
+      "name": "Cosmopolitan",
+      "description": "Vodka cosmopolitan"
+    },
+    {
+      "id": "36",
+      "sectionId": "44",
+      "name": "Sangria",
+      "description": "Fruit-infused sangria"
+    },
+    {
+      "id": "37",
+      "sectionId": "44",
+      "name": "Mimosa",
+      "description": "Champagne mimosa"
+    },
+    {
+      "id": "38",
+      "sectionId": "44",
+      "name": "Bloody Mary",
+      "description": "Spicy bloody mary"
+    },
+    {
+      "id": "39",
+      "sectionId": "44",
+      "name": "Piña Colada",
+      "description": "Tropical piña colada"
+    },
+    {
+      "id": "40",
+      "sectionId": "44",
+      "name": "White Russian",
+      "description": "Creamy white Russian"
+    },
+    {
+      "id": "41",
+      "sectionId": "55",
+      "name": "Tomato Soup",
+      "description": "Creamy tomato soup"
+    },
+    {
+      "id": "42",
+      "sectionId": "55",
+      "name": "Chicken Noodle Soup",
+      "description": "Hearty chicken noodle soup"
+    },
+    {
+      "id": "43",
+      "sectionId": "55",
+      "name": "Minestrone",
+      "description": "Vegetable minestrone soup"
+    },
+    {
+      "id": "44",
+      "sectionId": "55",
+      "name": "Clam Chowder",
+      "description": "New England clam chowder"
+    },
+    {
+      "id": "45",
+      "sectionId": "55",
+      "name": "French Onion Soup",
+      "description": "Caramelized onion soup"
+    },
+    {
+      "id": "46",
+      "sectionId": "55",
+      "name": "Lentil Soup",
+      "description": "Spiced lentil soup"
+    },
+    {
+      "id": "47",
+      "sectionId": "55",
+      "name": "Miso Soup",
+      "description": "Japanese miso soup"
+    },
+    {
+      "id": "48",
+      "sectionId": "55",
+      "name": "Potato Soup",
+      "description": "Creamy potato soup"
+    },
+    {
+      "id": "49",
+      "sectionId": "55",
+      "name": "Broccoli Cheddar Soup",
+      "description": "Cheesy broccoli soup"
+    },
+    {
+      "id": "50",
+      "sectionId": "55",
+      "name": "Gazpacho",
+      "description": "Chilled Spanish gazpacho"
+    }
+  ]
+}

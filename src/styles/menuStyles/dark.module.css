@@ -1,0 +1,36 @@
+.header {
+	background-color: #333333;
+}
+
+.logo {
+	color: #ffffff;
+}
+
+.navigation {
+	background-color: #444444;
+}
+
+.navigationSection {
+	background-color: #222222;
+	color: #ffffff;
+}
+
+.menu {
+	background-color: #222222;
+}
+
+.dishCard {
+	background-color: #444444;
+}
+
+.dishCardName {
+	color: #ffffff;
+}
+
+.dishCardDescription {
+	color: #cccccc;
+}
+
+.dishCardPrice {
+	color: #fff;
+}

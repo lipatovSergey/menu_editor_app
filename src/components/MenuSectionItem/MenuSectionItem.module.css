@@ -1,0 +1,17 @@
+.menuSectionItem {
+	position: relative;
+	transition: transform 0.3s ease;
+	user-select: none;
+	cursor: pointer;
+	-webkit-touch-callout: none;
+}
+
+.menuSectionCard {
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+.selected {
+	border: 2px solid green;
+}

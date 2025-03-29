@@ -1,0 +1,28 @@
+.dishItem {
+	position: relative;
+	width: 200px;
+	margin-bottom: 8px;
+
+	transition: transform 0.3s ease;
+	user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.dishCard {
+	position: relative;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.dishName {
+	font-size: 24px;
+	color: red;
+}
+
+.deleteBtn {
+	position: absolute;
+	bottom: -5px;
+	right: -5px;
+}
