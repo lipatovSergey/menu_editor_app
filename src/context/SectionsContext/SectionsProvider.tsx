@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { useState, ReactNode } from "react";
+import { useState, ReactNode, useEffect } from "react";
 import { SectionsContext } from "./SectionsContext";
 import type { MenuSection } from "../../types";
 
@@ -8,13 +8,29 @@ type SectionsProviderProps = {
 };
 
 export const SectionsProvider = ({ children }: SectionsProviderProps) => {
-	const [selectedSectionId, setSelectedSectionId] = useState<string>(uuidv4());
-	const [sections, setSections] = useState<MenuSection[]>([
-		{
-			id: selectedSectionId,
-			name: "New Section",
-		},
-	]);
+	const [selectedSectionId, setSelectedSectionId] = useState<string>(() => {
+		const savedSelectedSection = localStorage.getItem("selectedSectionId");
+		return savedSelectedSection ? JSON.parse(savedSelectedSection) : uuidv4();
+	});
+	const [sections, setSections] = useState<MenuSection[]>(() => {
+		const savedSections = localStorage.getItem("sections");
+		return savedSections
+			? JSON.parse(savedSections)
+			: [
+					{
+						id: selectedSectionId,
+						name: "New Section",
+					},
+			  ];
+	});
+
+	useEffect(() => {
+		localStorage.setItem("sections", JSON.stringify(sections));
+		localStorage.setItem(
+			"selectedSectionId",
+			JSON.stringify(selectedSectionId)
+		);
+	}, [sections, selectedSectionId]);
 
 	const addSection = () => {
 		setSections([{ id: uuidv4(), name: "New Section" }, ...sections]);
