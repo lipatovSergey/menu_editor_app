@@ -46,11 +46,7 @@ const ModalMenuSectionEdit = ({
 					value={sectionName}
 					onChange={handleChange}
 					autoFocus
-					style={{
-						resize: "none",
-						overflowY: "hidden",
-						width: "95%",
-					}}
+					className={styles.textarea}
 				/>
 				<button onClick={handleSaveBtn}>save</button>
 				<button onClick={handleCancelBtn}>cancel</button>

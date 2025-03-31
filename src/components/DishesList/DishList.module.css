@@ -1,11 +1,18 @@
 .dishes {
-	padding: 8px 8px;
+	padding: 14px 0;
+	max-height: 60%;
+	flex: 1;
 }
 
 .dishList {
-	padding: 14px 0;
 	padding-right: 4px;
+	max-height: 100%;
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.btnWrapper {
+	margin-bottom: 14px;
 }

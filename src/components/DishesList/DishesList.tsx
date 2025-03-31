@@ -17,8 +17,10 @@ export default function DishesList() {
 
 	return (
 		<div className={`${template.menu} ${styles.dishes}`}>
-			<button onClick={addDish}>Add</button>
-			<SortButton listToSort={"dishes"} active={isSorting} />
+			<div className={styles.btnWrapper}>
+				<button onClick={addDish}>Add</button>
+				<SortButton listToSort={"dishes"} active={isSorting} />
+			</div>
 			<div
 				className={styles.dishList}
 				style={{
