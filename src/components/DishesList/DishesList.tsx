@@ -16,23 +16,21 @@ export default function DishesList() {
 	console.log(activeSorting);
 
 	return (
-		<div className={`${template.menu} ${styles.wrapper}`}>
+		<div className={`${template.menu} ${styles.dishes}`}>
 			<button onClick={addDish}>Add</button>
 			<SortButton listToSort={"dishes"} active={isSorting} />
-			<div className={styles.wrapper}>
-				<div
-					className={styles.dishList}
-					style={{
-						touchAction: isSorting ? "none" : "auto",
-					}}
-				>
-					{dishes.map(
-						dish =>
-							dish.sectionId === selectedSectionId && (
-								<DishCard key={dish.id} dish={dish} isSorting={isSorting} />
-							)
-					)}
-				</div>
+			<div
+				className={styles.dishList}
+				style={{
+					touchAction: isSorting ? "none" : "auto",
+				}}
+			>
+				{dishes.map(
+					dish =>
+						dish.sectionId === selectedSectionId && (
+							<DishCard key={dish.id} dish={dish} isSorting={isSorting} />
+						)
+				)}
 			</div>
 		</div>
 	);

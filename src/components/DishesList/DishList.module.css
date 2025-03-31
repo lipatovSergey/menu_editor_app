@@ -1,5 +1,10 @@
+.dishes {
+	padding: 8px 8px;
+}
+
 .dishList {
-	margin-left: 16px;
+	padding: 14px 0;
+	padding-right: 4px;
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
