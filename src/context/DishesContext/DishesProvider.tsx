@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { useState, ReactNode } from "react";
+import { useState, ReactNode, useEffect } from "react";
 import { DishesContext } from "./DishesContext";
 import type { Dish } from "../../types";
 import { useSectionsContext } from "../SectionsContext/SectionsContext";
@@ -10,14 +10,23 @@ type DishesProviderProps = {
 
 export const DishesProvider = ({ children }: DishesProviderProps) => {
 	const { selectedSectionId } = useSectionsContext();
-	const [dishes, setDishes] = useState<Dish[]>([
-		{
-			id: uuidv4(),
-			description: "description",
-			name: "name",
-			sectionId: selectedSectionId,
-		},
-	]);
+	const [dishes, setDishes] = useState<Dish[]>(() => {
+		const savedDishes = localStorage.getItem("dishes");
+		return savedDishes
+			? JSON.parse(savedDishes)
+			: [
+					{
+						id: uuidv4(),
+						description: "description",
+						name: "name",
+						sectionId: selectedSectionId,
+					},
+			  ];
+	});
+
+	useEffect(() => {
+		localStorage.setItem("dishes", JSON.stringify(dishes));
+	}, [dishes]);
 
 	const addDish = () => {
 		setDishes([
