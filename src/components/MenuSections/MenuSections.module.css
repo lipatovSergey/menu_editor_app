@@ -1,12 +1,12 @@
 .menuSectionsNav {
-	margin: 0 -8px;
+	margin: 0 -8px; /* Adjusts outer margin to compensate for parent padding */
 	padding: 14px 8px;
 }
 
 .menuSectionsList {
 	display: flex;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
+	overflow-x: auto; /* Allows horizontal scrolling */
+	-webkit-overflow-scrolling: touch; /* Enables smooth scrolling on iOS */
 	padding: 14px 0;
 	gap: 12px;
 }

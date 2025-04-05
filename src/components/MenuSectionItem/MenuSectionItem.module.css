@@ -1,9 +1,9 @@
 .menuSectionItem {
 	position: relative;
-	transition: transform 0.3s ease;
-	user-select: none;
+	transition: transform 0.3s ease; /* Smooth drag animation */
+	user-select: none; /* Prevents text selection during drag */
 	cursor: pointer;
-	-webkit-touch-callout: none;
+	-webkit-touch-callout: none; /* Prevents iOS context menu on long press */
 }
 
 .menuSectionCard {

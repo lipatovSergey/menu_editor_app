@@ -10,11 +10,11 @@
 }
 
 .editor {
-	height: 100vh;
+	height: 100vh; /* Full viewport height */
 	padding: 0 8px;
 	display: flex;
 	flex-direction: column;
-	overflow-y: hidden;
+	overflow-y: hidden; /* Prevents editor scroll */
 }
 
 .editorHeader {

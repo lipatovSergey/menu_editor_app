@@ -10,12 +10,15 @@ const ModalMenuSectionEdit = ({
 	section: MenuSection;
 	modalStateSetter: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+	// Ref for the textarea element
 	const textareaRef = useRef<HTMLTextAreaElement>(null);
+	// Get the updateSection function from the sections context
 	const { updateSection } = useSectionsContext();
+	// State to manage the section name input value
 	const [sectionName, setSectionName] = useState(section.name);
 
+	// Focus and set cursor at the end of the text in the textarea on mount
 	useEffect(() => {
-		// проверка что textareaRef не равен null, тоесть textArea смонтирован
 		if (textareaRef.current) {
 			const length = textareaRef.current.value.length;
 			textareaRef.current.setSelectionRange(length, length);
@@ -23,17 +26,20 @@ const ModalMenuSectionEdit = ({
 		}
 	}, []);
 
+	// Handles changes to the textarea input
 	const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
 		setSectionName(e.target.value);
 	};
 
+	// Handles saving the edited section name
 	const handleSaveBtn = () => {
 		updateSection(section.id, { name: sectionName });
-		modalStateSetter(false);
+		modalStateSetter(false); // Close the modal
 	};
 
+	// Handles canceling the edit and closing the modal
 	const handleCancelBtn = () => {
-		modalStateSetter(false);
+		modalStateSetter(false); // Close the modal
 	};
 
 	return (
@@ -45,7 +51,7 @@ const ModalMenuSectionEdit = ({
 					ref={textareaRef}
 					value={sectionName}
 					onChange={handleChange}
-					autoFocus
+					autoFocus // Initially focus the textarea (though useEffect also handles this)
 					className={styles.textarea}
 				/>
 				<button onClick={handleSaveBtn}>save</button>

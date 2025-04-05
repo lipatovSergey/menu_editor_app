@@ -10,16 +10,22 @@ const ModalDishEdit = ({
 	dish: Dish;
 	modalStateSetter: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
+	// Get the updateDish function from the dishes context
 	const { updateDish } = useDishesContext();
+	// State to manage the dish name input value
 	const [dishName, setDishName] = useState(dish.name);
+	// State to manage the dish description input value
 	const [dishDescription, setDishDescription] = useState(dish.description);
+	// State to track the currently focused text area
 	const [activeField, setActiveField] = useState<string | null>(null);
 
+	// Refs for the name and description text areas
 	const fieldsRefs = {
 		name: useRef<HTMLTextAreaElement>(null),
 		description: useRef<HTMLTextAreaElement>(null),
 	};
 
+	// Handles clicking on a text area to focus and set the cursor at the end
 	const handleFieldClick = (fieldName: keyof typeof fieldsRefs) => {
 		const textarea = fieldsRefs[fieldName].current;
 		if (!textarea) return;
@@ -28,13 +34,15 @@ const ModalDishEdit = ({
 		setActiveField(fieldName);
 	};
 
+	// Handles saving the edited dish details
 	const handleSaveBtn = () => {
 		updateDish(dish.id, { name: dishName, description: dishDescription });
-		modalStateSetter(false);
+		modalStateSetter(false); // Close the modal
 	};
 
+	// Handles canceling the edit and closing the modal
 	const handleCancelBtn = () => {
-		modalStateSetter(false);
+		modalStateSetter(false); // Close the modal
 	};
 
 	return (

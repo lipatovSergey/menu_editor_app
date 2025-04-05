@@ -1,20 +1,16 @@
 .dishItem {
-	position: relative;
-	margin-bottom: 8px;
-	transition: transform 0.3s ease;
-	user-select: none;
-	-webkit-touch-callout: none;
+	position: relative; /* Enables absolute/fixed positioning within */
+	user-select: none; /* Prevents text highlighting on drag */
+	-webkit-touch-callout: none; /* Disables iOS context menu on long press */
 }
 
 .dishCard {
-	padding: 4px;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	cursor: pointer;
+	display: flex; /* Enables flexbox layout for children */
+	flex-direction: column; /* Arranges children vertically */
+	cursor: pointer; /* Indicates interactivity */
 }
 
 .dishName {
-	font-size: 24px;
-	color: red;
+	font-size: 24px; /* Larger than default text */
+	color: red; /* Non-standard text color */
 }

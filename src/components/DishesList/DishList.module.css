@@ -1,7 +1,7 @@
 .dishes {
 	padding: 14px 0;
-	max-height: 100%;
-	flex: 1;
+	max-height: 100%; /* Takes up remaining vertical space */
+	flex: 1; /* Allows vertical growth */
 	padding-bottom: 14px;
 }
 
@@ -9,9 +9,9 @@
 	padding-bottom: 14px;
 	padding-right: 4px;
 	max-height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow-y: auto;
+	display: flex; /* Uses flexbox for layout */
+	flex-direction: column; /* Arranges items vertically */
+	overflow-y: auto; /* Enables vertical scrolling */
 	overflow-x: hidden;
 }
 

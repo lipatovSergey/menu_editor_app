@@ -30,13 +30,14 @@ export default function MenuEditor() {
 	const { dishes, setDishes } = useDishesContext();
 	const { sections, setSections } = useSectionsContext();
 
-	// Добавляем состояние для DragOverlay
+	// State for the currently dragged item
 	const [activeItem, setActiveItem] = useState<{
 		id: string;
 		type: "dish" | "section";
 	} | null>(null);
 	const { template } = useMenuTemplate();
 
+	// Configure drag and drop sensors
 	const sensors = useSensors(
 		useSensor(PointerSensor, {
 			activationConstraint: {
@@ -45,13 +46,13 @@ export default function MenuEditor() {
 		}),
 		useSensor(TouchSensor, {
 			activationConstraint: {
-				delay: 250, // Работает только для "press" жестов
-				tolerance: 5, // Должно быть > 5px
+				delay: 250,
+				tolerance: 5,
 			},
 		})
 	);
 
-	// Обработчик начала перетаскивания
+	// Handle drag start event
 	const handleDragStart = (event: DragStartEvent) => {
 		const { active } = event;
 		const type = active.data.current?.type as "dish" | "section" | undefined;
@@ -59,24 +60,22 @@ export default function MenuEditor() {
 		if (type) {
 			setActiveItem({
 				id: active.id.toString(),
-				type: type, // Используем явный type из данных
+				type: type,
 			});
 		}
-		document.body.style.overflow = "hidden";
+		document.body.style.overflow = "hidden"; // Prevent scrolling during drag
 	};
 
-	// Обработчик окончания перетаскивания
+	// Handle drag end event
 	const handleDragEnd = (event: DragEndEvent) => {
-		document.body.style.overflow = "auto";
+		document.body.style.overflow = "auto"; // Restore scrolling
 		const { active, over } = event;
 
 		if (!over || active.id === over.id) {
 			setActiveItem(null);
-
 			return;
 		}
 
-		// Обновление позиций
 		const group = active.data.current?.group;
 		if (group === "sections") {
 			setSections(items =>
@@ -127,7 +126,7 @@ export default function MenuEditor() {
 					<DishesList />
 				</SortableContext>
 
-				{/* Добавляем DragOverlay */}
+				{/* Display the dragged item */}
 				<DragOverlay style={{ zIndex: 1000 }}>
 					{activeItem && (
 						<DragOverlayItem id={activeItem.id}>
